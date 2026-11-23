@@ -1,0 +1,10 @@
+node_modules
+test-results
+playwright-report
+blob-report
+e2e
+tests
+jest.config.js
+package-lock.json
+.git
+.gitignore
