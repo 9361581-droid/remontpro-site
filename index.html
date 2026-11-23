@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -33,6 +37,22 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Aurora Background -->
+        <div class="aurora">
+            <div class="aurora-beam"></div>
+            <div class="aurora-beam"></div>
+            <div class="aurora-beam"></div>
+        </div>
+        <!-- Spotlight -->
+        <div class="spotlight" id="spotlight"></div>
+        <!-- Meteors -->
+        <div class="meteors">
+            <div class="meteor"></div>
+            <div class="meteor"></div>
+            <div class="meteor"></div>
+            <div class="meteor"></div>
+            <div class="meteor"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">Ремонт квартир в Москве</div>
@@ -511,6 +531,10 @@
 
     <!-- CTA Section -->
     <section class="cta">
+        <div class="cta-aurora">
+            <div class="aurora-beam"></div>
+            <div class="aurora-beam"></div>
+        </div>
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Узнайте точную стоимость за 2 минуты</h2>
