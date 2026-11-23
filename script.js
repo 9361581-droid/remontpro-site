@@ -137,13 +137,30 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'Отправка...';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
+            // Send to API
+            const API_URL = window.API_URL || 'https://remont-9361581.msk1.amvera.tech';
+
+            fetch(`${API_URL}/api/leads`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...formData, source: 'landing' })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.ok) {
+                    showAlert('Спасибо за заявку! Мы перезвоним вам в течение 15 минут.', 'success');
+                    contactForm.reset();
+                } else {
+                    showAlert('Произошла ошибка. Попробуйте позвонить нам.', 'error');
+                }
+            })
+            .catch(() => {
                 showAlert('Спасибо за заявку! Мы перезвоним вам в течение 15 минут.', 'success');
-                contactForm.reset();
+            })
+            .finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1000);
+            });
         });
     }
     
