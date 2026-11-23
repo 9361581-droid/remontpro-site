@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прозрачность — РемонтПро | Реальные метрики работы</title>
+    <meta name="description" content="Дашборд прозрачности РемонтПро. Реальные метрики: объекты сданы, сроки, фотоотчёты. Обновляется каждый месяц.">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🔨</span>
+                    <span class="logo-text">РемонтПро</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#portfolio">Портфолио</a></li>
+                    <li><a href="index.html#pricing">Цены</a></li>
+                    <li><a href="dashboard.html" class="active">Прозрачность</a></li>
+                </ul>
+                <a href="tel:+79991234567" class="phone">+7 (999) 123-45-67</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Прозрачность — наш принцип</h1>
+                <p class="hero-subtitle">
+                    Мы открыто показываем результаты нашей работы. Эти цифры обновляются каждый месяц.
+                </p>
+                <div class="last-updated">
+                    Последнее обновление: <span id="lastUpdated">03 ноября 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">🏠</div>
+                    <div class="metric-value" data-target="2">0</div>
+                    <div class="metric-label">Объектов сдано</div>
+                    <div class="metric-description">квартиры отремонтированы и сданы</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">🔨</div>
+                    <div class="metric-value" data-target="1">0</div>
+                    <div class="metric-label">Объектов в работе</div>
+                    <div class="metric-description">ремонт идёт прямо сейчас</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">⏱️</div>
+                    <div class="metric-value-text">2.5 мес</div>
+                    <div class="metric-label">Средний срок</div>
+                    <div class="metric-description">от старта до сдачи объекта</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">✅</div>
+                    <div class="metric-value" data-target="100" data-suffix="%">0</div>
+                    <div class="metric-label">Сдано в срок</div>
+                    <div class="metric-description">объектов сданы без просрочки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Наш подход</div>
+                <h2 class="section-title">Как мы обеспечиваем прозрачность</h2>
+                <p class="section-subtitle">Четыре принципа, которые делают нашу работу открытой для клиентов</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">📸</div>
+                    <h3 class="process-title">Еженедельные фотоотчёты</h3>
+                    <p class="process-description">
+                        Каждую пятницу присылаем фото прогресса в WhatsApp/Telegram
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">📋</div>
+                    <h3 class="process-title">Детальная смета</h3>
+                    <p class="process-description">
+                        Каждый рубль учтён. Никаких скрытых платежей
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">🔒</div>
+                    <h3 class="process-title">Фиксированная цена</h3>
+                    <p class="process-description">
+                        Цена в договоре не меняется. Штраф за просрочку 0.1%/день
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">💬</div>
+                    <h3 class="process-title">Чат с прорабом</h3>
+                    <p class="process-description">
+                        Групповой чат в WhatsApp — задайте вопрос в любой момент
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Documentation Section -->
+    <section class="photo-docs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Контроль качества</div>
+                <h2 class="section-title">Фотографируем то, что вы не увидите</h2>
+                <p class="section-subtitle">
+                    Электрика, гидроизоляция, стяжка — всё фотографируем и сохраняем. 
+                    Вы точно знаете, что внутри стен.
+                </p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">⚡</div>
+                        <div class="photo-text">Фото появится после завершения объекта</div>
+                    </div>
+                    <div class="photo-caption">Электрика</div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">💧</div>
+                        <div class="photo-text">Фото появится после завершения объекта</div>
+                    </div>
+                    <div class="photo-caption">Гидроизоляция</div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">🏗️</div>
+                        <div class="photo-text">Фото появится после завершения объекта</div>
+                    </div>
+                    <div class="photo-caption">Стяжка пола</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Отзывы клиентов</div>
+                <h2 class="section-title">Что говорят о прозрачности</h2>
+                <p class="section-subtitle">Реальные отзывы людей, которые ценят открытость в работе</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">
+                        «Спасибо за прозрачность! Я всегда знал, что происходит и сколько это стоит.
+                        Каждую неделю присылали фотоотчёт. Рекомендую!»
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">И</div>
+                        <div class="author-info">
+                            <div class="author-name">Иван</div>
+                            <div class="author-project">54 м², пакет Стандарт</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">
+                        «Боялась, что смета вырастет в процессе, но цена осталась фиксированной.
+                        Прораб всегда на связи, все вопросы решались быстро.»
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">Е</div>
+                        <div class="author-info">
+                            <div class="author-name">Елена</div>
+                            <div class="author-project">80 м², пакет Стандарт</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Хотите ремонт с полной прозрачностью?</h2>
+                <p class="cta-subtitle">
+                    Рассчитайте стоимость за 5 минут — ответьте на 10 вопросов в нашем калькуляторе
+                </p>
+                <a href="quiz.html" class="btn btn-primary">Рассчитать стоимость</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🔨</span>
+                    <span class="logo-text">РемонтПро</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="index.html#services">Услуги</a>
+                    <a href="index.html#portfolio">Портфолио</a>
+                    <a href="index.html#pricing">Цены</a>
+                    <a href="dashboard.html">Прозрачность</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    <a href="mailto:info@remontpro.ru">info@remontpro.ru</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 РемонтПро. Все права защищены.</p>
+                <p><a href="privacy.html">Политика конфиденциальности</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

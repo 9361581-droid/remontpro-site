@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рассчитать стоимость ремонта | РемонтПро — квиз-калькулятор</title>
+    <meta name="description" content="Рассчитайте стоимость ремонта квартиры за 2 минуты. Ответьте на 10 вопросов и получите предварительную смету.">
+    <link rel="stylesheet" href="quiz-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="quiz-header">
+        <div class="quiz-container">
+            <a href="index.html" class="quiz-logo">
+                <span class="quiz-logo-icon">🔨</span>
+                <span class="quiz-logo-text">РемонтПро</span>
+            </a>
+            <a href="index.html" class="quiz-back-link">← Назад на сайт</a>
+        </div>
+    </header>
+
+    <!-- Main quiz area -->
+    <main class="quiz-main">
+        <div class="quiz-container">
+
+            <!-- Progress bar -->
+            <div class="quiz-progress" id="quiz-progress">
+                <div class="quiz-progress-info">
+                    <span id="progress-text">Вопрос 1 из 10</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Quiz steps container -->
+            <div class="quiz-steps" id="quiz-steps">
+
+                <!-- Вопрос 1: Тип помещения -->
+                <div class="quiz-step active" data-step="1">
+                    <h2 class="quiz-question-title">Какой тип помещения нужно отремонтировать?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="propertyType" data-value="newbuild">
+                            <span class="quiz-option-icon">🏢</span>
+                            <span class="quiz-option-text">Квартира в новостройке</span>
+                        </button>
+                        <button class="quiz-option" data-question="propertyType" data-value="secondary">
+                            <span class="quiz-option-icon">🏠</span>
+                            <span class="quiz-option-text">Вторичная квартира</span>
+                        </button>
+                        <button class="quiz-option" data-question="propertyType" data-value="apartments">
+                            <span class="quiz-option-icon">🏬</span>
+                            <span class="quiz-option-text">Апартаменты</span>
+                        </button>
+                        <button class="quiz-option" data-question="propertyType" data-value="room">
+                            <span class="quiz-option-icon">🚪</span>
+                            <span class="quiz-option-text">Комната</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 2: Количество комнат -->
+                <div class="quiz-step" data-step="2">
+                    <h2 class="quiz-question-title">Сколько комнат в помещении?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="rooms" data-value="studio">
+                            <span class="quiz-option-icon">📐</span>
+                            <span class="quiz-option-text">Студия</span>
+                        </button>
+                        <button class="quiz-option" data-question="rooms" data-value="1">
+                            <span class="quiz-option-icon">1️⃣</span>
+                            <span class="quiz-option-text">1 комната</span>
+                        </button>
+                        <button class="quiz-option" data-question="rooms" data-value="2">
+                            <span class="quiz-option-icon">2️⃣</span>
+                            <span class="quiz-option-text">2 комнаты</span>
+                        </button>
+                        <button class="quiz-option" data-question="rooms" data-value="3">
+                            <span class="quiz-option-icon">3️⃣</span>
+                            <span class="quiz-option-text">3 комнаты</span>
+                        </button>
+                        <button class="quiz-option" data-question="rooms" data-value="4+">
+                            <span class="quiz-option-icon">4️⃣</span>
+                            <span class="quiz-option-text">4+ комнат</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 3: Площадь -->
+                <div class="quiz-step" data-step="3">
+                    <h2 class="quiz-question-title">Какая площадь помещения?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="area" data-value="35">
+                            <span class="quiz-option-text">До 40 м²</span>
+                        </button>
+                        <button class="quiz-option" data-question="area" data-value="50">
+                            <span class="quiz-option-text">40-60 м²</span>
+                        </button>
+                        <button class="quiz-option" data-question="area" data-value="70">
+                            <span class="quiz-option-text">60-80 м²</span>
+                        </button>
+                        <button class="quiz-option" data-question="area" data-value="100">
+                            <span class="quiz-option-text">80-120 м²</span>
+                        </button>
+                        <button class="quiz-option" data-question="area" data-value="140">
+                            <span class="quiz-option-text">Более 120 м²</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 4: Тип ремонта -->
+                <div class="quiz-step" data-step="4">
+                    <h2 class="quiz-question-title">Какой тип ремонта вам нужен?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="repairType" data-value="cosmetic">
+                            <span class="quiz-option-icon">🎨</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Косметический</span>
+                                <span class="quiz-option-desc">Обновить, освежить — от 8 000 ₽/м²</span>
+                            </div>
+                        </button>
+                        <button class="quiz-option" data-question="repairType" data-value="capital">
+                            <span class="quiz-option-icon">🔨</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Капитальный</span>
+                                <span class="quiz-option-desc">Полная переделка — от 15 000 ₽/м²</span>
+                            </div>
+                        </button>
+                        <button class="quiz-option" data-question="repairType" data-value="designer">
+                            <span class="quiz-option-icon">✨</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Дизайнерский</span>
+                                <span class="quiz-option-desc">Индивидуальный проект — от 25 000 ₽/м²</span>
+                            </div>
+                        </button>
+                        <button class="quiz-option" data-question="repairType" data-value="unknown">
+                            <span class="quiz-option-icon">🤔</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Не знаю</span>
+                                <span class="quiz-option-desc">Нужна консультация</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 5: Дизайн-проект -->
+                <div class="quiz-step" data-step="5">
+                    <h2 class="quiz-question-title">Нужен ли дизайн-проект?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="designProject" data-value="3d">
+                            <span class="quiz-option-icon">🖥️</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Да, с 3D-визуализацией</span>
+                                <span class="quiz-option-desc">+1 500-3 000 ₽/м²</span>
+                            </div>
+                        </button>
+                        <button class="quiz-option" data-question="designProject" data-value="basic">
+                            <span class="quiz-option-icon">📋</span>
+                            <div class="quiz-option-content">
+                                <span class="quiz-option-text">Да, базовый</span>
+                                <span class="quiz-option-desc">+1 500 ₽/м²</span>
+                            </div>
+                        </button>
+                        <button class="quiz-option" data-question="designProject" data-value="none">
+                            <span class="quiz-option-icon">✅</span>
+                            <span class="quiz-option-text">Нет, у меня есть готовый</span>
+                        </button>
+                        <button class="quiz-option" data-question="designProject" data-value="unsure">
+                            <span class="quiz-option-icon">🤷</span>
+                            <span class="quiz-option-text">Не уверен(а)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 6: Когда начать -->
+                <div class="quiz-step" data-step="6">
+                    <h2 class="quiz-question-title">Когда планируете начать ремонт?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="timeline" data-value="2weeks">
+                            <span class="quiz-option-icon">⚡</span>
+                            <span class="quiz-option-text">В ближайшие 2 недели</span>
+                        </button>
+                        <button class="quiz-option" data-question="timeline" data-value="month">
+                            <span class="quiz-option-icon">📅</span>
+                            <span class="quiz-option-text">В течение месяца</span>
+                        </button>
+                        <button class="quiz-option" data-question="timeline" data-value="2-3months">
+                            <span class="quiz-option-icon">🗓️</span>
+                            <span class="quiz-option-text">Через 2-3 месяца</span>
+                        </button>
+                        <button class="quiz-option" data-question="timeline" data-value="browsing">
+                            <span class="quiz-option-icon">👀</span>
+                            <span class="quiz-option-text">Пока просто узнаю цены</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 7: Состояние квартиры -->
+                <div class="quiz-step" data-step="7">
+                    <h2 class="quiz-question-title">Какое текущее состояние квартиры?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="condition" data-value="noFinish">
+                            <span class="quiz-option-icon">🧱</span>
+                            <span class="quiz-option-text">Новостройка без отделки</span>
+                        </button>
+                        <button class="quiz-option" data-question="condition" data-value="roughFinish">
+                            <span class="quiz-option-icon">🏗️</span>
+                            <span class="quiz-option-text">Новостройка с черновой отделкой</span>
+                        </button>
+                        <button class="quiz-option" data-question="condition" data-value="demolition">
+                            <span class="quiz-option-icon">🔧</span>
+                            <span class="quiz-option-text">Вторичка - нужен демонтаж</span>
+                        </button>
+                        <button class="quiz-option" data-question="condition" data-value="cosmeticEnough">
+                            <span class="quiz-option-icon">👌</span>
+                            <span class="quiz-option-text">Вторичка - косметика достаточна</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 8: Бюджет -->
+                <div class="quiz-step" data-step="8">
+                    <h2 class="quiz-question-title">Какой у вас бюджет на ремонт?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="budget" data-value="500k">
+                            <span class="quiz-option-text">До 500 000 ₽</span>
+                        </button>
+                        <button class="quiz-option" data-question="budget" data-value="500k-1m">
+                            <span class="quiz-option-text">500 000 - 1 000 000 ₽</span>
+                        </button>
+                        <button class="quiz-option" data-question="budget" data-value="1m-2m">
+                            <span class="quiz-option-text">1 000 000 - 2 000 000 ₽</span>
+                        </button>
+                        <button class="quiz-option" data-question="budget" data-value="2m+">
+                            <span class="quiz-option-text">Более 2 000 000 ₽</span>
+                        </button>
+                        <button class="quiz-option" data-question="budget" data-value="afterCalc">
+                            <span class="quiz-option-text">Готов(а) обсудить после расчёта</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 9: Что важнее -->
+                <div class="quiz-step" data-step="9">
+                    <h2 class="quiz-question-title">Что для вас важнее всего?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="priority" data-value="price">
+                            <span class="quiz-option-icon">💰</span>
+                            <span class="quiz-option-text">Фиксированная цена без сюрпризов</span>
+                        </button>
+                        <button class="quiz-option" data-question="priority" data-value="speed">
+                            <span class="quiz-option-icon">⚡</span>
+                            <span class="quiz-option-text">Скорость (быстрее закончить)</span>
+                        </button>
+                        <button class="quiz-option" data-question="priority" data-value="quality">
+                            <span class="quiz-option-icon">⭐</span>
+                            <span class="quiz-option-text">Качество материалов и работ</span>
+                        </button>
+                        <button class="quiz-option" data-question="priority" data-value="design">
+                            <span class="quiz-option-icon">🎨</span>
+                            <span class="quiz-option-text">Дизайн и индивидуальный подход</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Вопрос 10: Способ связи -->
+                <div class="quiz-step" data-step="10">
+                    <h2 class="quiz-question-title">Как удобнее получить расчёт?</h2>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-question="contactMethod" data-value="phone">
+                            <span class="quiz-option-icon">📞</span>
+                            <span class="quiz-option-text">Позвоните мне</span>
+                        </button>
+                        <button class="quiz-option" data-question="contactMethod" data-value="whatsapp">
+                            <span class="quiz-option-icon">💬</span>
+                            <span class="quiz-option-text">Напишите в WhatsApp</span>
+                        </button>
+                        <button class="quiz-option" data-question="contactMethod" data-value="telegram">
+                            <span class="quiz-option-icon">✈️</span>
+                            <span class="quiz-option-text">Напишите в Telegram</span>
+                        </button>
+                        <button class="quiz-option" data-question="contactMethod" data-value="email">
+                            <span class="quiz-option-icon">✉️</span>
+                            <span class="quiz-option-text">Отправьте на email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Форма заявки (шаг 11) -->
+                <div class="quiz-step quiz-result-step" data-step="11">
+                    <div class="quiz-result">
+                        <h2 class="quiz-result-title">Предварительный расчёт готов!</h2>
+                        <div class="quiz-result-price-block">
+                            <p class="quiz-result-label">Стоимость ремонта:</p>
+                            <p class="quiz-result-price" id="result-price">—</p>
+                            <p class="quiz-result-note">Точную стоимость определим после выезда на объект (бесплатно)</p>
+                        </div>
+
+                        <form class="quiz-form" id="quiz-form" novalidate>
+                            <div class="quiz-form-group">
+                                <label for="quiz-name" class="quiz-form-label">Ваше имя *</label>
+                                <input type="text" id="quiz-name" name="name" class="quiz-form-input" placeholder="Как к вам обращаться?" required autocomplete="name">
+                                <span class="quiz-form-error" id="error-name"></span>
+                            </div>
+
+                            <div class="quiz-form-group">
+                                <label for="quiz-phone" class="quiz-form-label">Телефон *</label>
+                                <input type="tel" id="quiz-phone" name="phone" class="quiz-form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+                                <span class="quiz-form-error" id="error-phone"></span>
+                            </div>
+
+                            <div class="quiz-form-group">
+                                <label for="quiz-email" class="quiz-form-label">Email (необязательно)</label>
+                                <input type="email" id="quiz-email" name="email" class="quiz-form-input" placeholder="your@email.com" autocomplete="email">
+                                <span class="quiz-form-error" id="error-email"></span>
+                            </div>
+
+                            <div class="quiz-form-group quiz-form-checkbox">
+                                <label class="quiz-checkbox-label">
+                                    <input type="checkbox" id="quiz-privacy" name="privacy" required>
+                                    <span class="quiz-checkbox-custom"></span>
+                                    <span>Согласен с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+                                </label>
+                                <span class="quiz-form-error" id="error-privacy"></span>
+                            </div>
+
+                            <button type="submit" class="quiz-btn quiz-btn-primary quiz-btn-block">
+                                Получить точный расчёт
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Экран успеха -->
+                <div class="quiz-step quiz-success-step" data-step="12">
+                    <div class="quiz-success">
+                        <div class="quiz-success-icon">✅</div>
+                        <h2 class="quiz-success-title">Спасибо!</h2>
+                        <p class="quiz-success-text">Мы свяжемся с вами в течение 15 минут.</p>
+                        <a href="index.html" class="quiz-btn quiz-btn-outline">Вернуться на сайт</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation buttons (скрыты на форме и экране успеха) -->
+            <div class="quiz-nav" id="quiz-nav">
+                <button class="quiz-btn quiz-btn-back" id="btn-back" disabled>← Назад</button>
+                <button class="quiz-btn quiz-btn-next" id="btn-next" disabled>Далее →</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="quiz-footer">
+        <div class="quiz-container">
+            <p class="quiz-footer-text">
+                © 2026 РемонтПро |
+                <a href="privacy.html" class="quiz-footer-link">Политика конфиденциальности</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

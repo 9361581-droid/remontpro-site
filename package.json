@@ -1,0 +1,20 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "``` website/ ├── index.html          ← Главная страница (лендинг) ├── styles.css          ← Стили сайта ├── script.js           ← JavaScript (формы, анимации) ├── images/             ← Папка для изображений │   ├── project-1-before.jpg │   ├── project-1-after.jpg │   ├── project-2-before.jpg │   ├── project-2-after.jpg │   ├── project-3-before.jpg │   └── project-3-after.jpg └── README.md           ← Этот файл ```",
+  "main": "dashboard.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:e2e": "npx playwright test",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
+  }
+}
