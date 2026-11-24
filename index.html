@@ -3,659 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт квартир в Москве | От дизайна до тапочек | Гарантия 3 года</title>
-    <meta name="description" content="Комплексный ремонт квартир в Москве от 8000 ₽/м². Фиксированная цена, гарантия 3 года, еженедельные фотоотчёты. От дизайна до тапочек.">
+    <title>РемонтПро — Комплексный ремонт квартир в Москве</title>
+    <meta name="description" content="Ремонт квартир в Москве от 8 000 ₽/м². Фиксированная цена, гарантия 3 года, еженедельные фотоотчёты. От дизайна до тапочек.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-spinner"></div>
-    </div>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <div class="logo">
-                    <span class="logo-icon">🔨</span>
+                <a href="index.html" class="logo">
                     <span class="logo-text">РемонтПро</span>
-                </div>
+                </a>
                 <ul class="nav-menu">
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#pricing">Цены</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#how">Как работаем</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#cta">Контакты</a></li>
                 </ul>
-                <a href="tel:+79991234567" class="phone">+7 (999) 123-45-67</a>
+                <a href="tel:+79261162631" class="nav-phone">+7 (926) 116-26-31</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero — Fullscreen Slider -->
     <section class="hero">
-        <!-- Aurora Background -->
-        <div class="aurora">
-            <div class="aurora-beam"></div>
-            <div class="aurora-beam"></div>
-            <div class="aurora-beam"></div>
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="Современный интерьер после ремонта">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80" alt="Дизайнерский ремонт квартиры">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80" alt="Кухня после капитального ремонта">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400b0?w=1920&q=80" alt="Спальня в современном стиле">
+            </div>
         </div>
-        <!-- Spotlight -->
-        <div class="spotlight" id="spotlight"></div>
-        <!-- Meteors -->
-        <div class="meteors">
-            <div class="meteor"></div>
-            <div class="meteor"></div>
-            <div class="meteor"></div>
-            <div class="meteor"></div>
-            <div class="meteor"></div>
-        </div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Ремонт квартир в Москве</div>
-                <h1 class="hero-title">
-                    Ремонт без <span class="accent">сюрпризов</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Фиксированная цена в договоре. Гарантия 3 года. Еженедельные фотоотчёты.
-                    65% клиентов сталкиваются со срывом сроков или раздутой сметой — с нами этого не будет.
-                </p>
-                <div class="hero-features">
-                    <div class="feature">
-                        <div class="feature-icon">💰</div>
-                        <div class="feature-value">8 000 ₽/м²</div>
-                        <div class="feature-label">Стоимость работ</div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🛡️</div>
-                        <div class="feature-value">3 года</div>
-                        <div class="feature-label">Гарантия</div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">⏱️</div>
-                        <div class="feature-value">2 месяца</div>
-                        <div class="feature-label">Минимальный срок</div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">📸</div>
-                        <div class="feature-value">Еженедельно</div>
-                        <div class="feature-label">Фотоотчёты</div>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="quiz.html" class="btn btn-primary">Рассчитать точную стоимость</a>
-                    <a href="#portfolio" class="btn btn-secondary">Смотреть работы</a>
+                <p class="hero-tag">Комплексный ремонт в Москве</p>
+                <h1 class="hero-title">Конструируем<br>идеальные интерьеры</h1>
+                <p class="hero-subtitle">От дизайна до тапочек — один подрядчик на весь цикл. Фиксированная цена в договоре, гарантия 3 года, еженедельные фотоотчёты.</p>
+                <div class="hero-actions">
+                    <a href="#cta" class="btn btn-hero-primary">Получить смету</a>
+                    <a href="#projects" class="btn btn-hero-ghost">Смотреть проекты</a>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll">
-            <div class="hero-scroll-icon">↓</div>
+        <div class="hero-dots" id="heroDots">
+            <span class="hero-dot active" data-slide="0"></span>
+            <span class="hero-dot" data-slide="1"></span>
+            <span class="hero-dot" data-slide="2"></span>
+            <span class="hero-dot" data-slide="3"></span>
         </div>
     </section>
 
-    <!-- Problem Section (StoryBrand) -->
-    <section class="problem-section">
+    <!-- Stats — Infographic -->
+    <section class="stats">
         <div class="container">
-            <div class="problem-content">
-                <div class="problem-badge">Знакомо?</div>
-                <h2 class="problem-title">65% клиентов боятся одного и того же</h2>
-                <div class="problems-grid">
-                    <div class="problem-item">
-                        <div class="problem-icon">💸</div>
-                        <h3 class="problem-item-title">Смета растёт в процессе</h3>
-                        <p class="problem-item-text">Назвали одну цену, а в договоре — другая. И ещё «непредвиденные расходы».</p>
-                    </div>
-                    <div class="problem-item">
-                        <div class="problem-icon">⏰</div>
-                        <h3 class="problem-item-title">Сроки срываются</h3>
-                        <p class="problem-item-text">Обещали 2 месяца, а прошло 4 — и конца не видно. Бригада «на другом объекте».</p>
-                    </div>
-                    <div class="problem-item">
-                        <div class="problem-icon">🤷</div>
-                        <h3 class="problem-item-title">Непонятно, что происходит</h3>
-                        <p class="problem-item-text">Прораб не отвечает, на объекте тишина. Вы платите, но не видите прогресса.</p>
-                    </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="150">0</span>+</div>
+                    <div class="stat-label">объектов сдано</div>
+                    <div class="stat-line"></div>
                 </div>
-                <div class="problem-solution">
-                    <p class="problem-solution-text">
-                        <strong>С РемонтПро</strong> — фиксированная цена в договоре, чёткие сроки со штрафом за просрочку,
-                        и еженедельные фотоотчёты. Один подрядчик. Полная ответственность.
-                    </p>
-                    <a href="quiz.html" class="btn btn-primary">Рассчитать стоимость моего ремонта</a>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="98">0</span>%</div>
+                    <div class="stat-label">клиентов рекомендуют</div>
+                    <div class="stat-line"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="3">0</span> года</div>
+                    <div class="stat-label">гарантия на работы</div>
+                    <div class="stat-line"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="0">0</span> ₽</div>
+                    <div class="stat-label">скрытых доплат</div>
+                    <div class="stat-line"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Problems -->
+    <section class="problems" id="problems">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Наши услуги</div>
-                <h2 class="section-title">Полный цикл работ</h2>
-                <p class="section-subtitle">От демонтажа до установки мебели — берём всё на себя</p>
+            <div class="section-head">
+                <span class="section-tag">Знакомо?</span>
+                <h2 class="section-title">Три страха, из-за которых люди откладывают ремонт годами</h2>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3 class="service-title">Дизайн-проект</h3>
-                    <p class="service-description">
-                        Индивидуальный дизайн интерьера: планировка, 3D-визуализация, 
-                        подбор материалов и мебели. Авторский надзор.
-                    </p>
-                    <div class="service-price">от 1 500 ₽/м²</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🔨</div>
-                    <h3 class="service-title">Черновая отделка</h3>
-                    <p class="service-description">
-                        Демонтаж, стяжка пола, штукатурка стен, электрика, сантехника, 
-                        гидроизоляция. Все скрытые работы.
-                    </p>
-                    <div class="service-price">от 5 000 ₽/м²</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3 class="service-title">Чистовая отделка</h3>
-                    <p class="service-description">
-                        Покраска стен, укладка плитки и ламината, установка дверей, 
-                        монтаж потолков. Финальная красота.
-                    </p>
-                    <div class="service-price">от 5 000 ₽/м²</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🛋️</div>
-                    <h3 class="service-title">Мебель и техника</h3>
-                    <p class="service-description">
-                        Подбор, закупка и установка кухни, встроенной мебели, 
-                        бытовой техники. Под ключ.
-                    </p>
-                    <div class="service-price">индивидуально</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages Section -->
-    <section class="advantages">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Почему мы</div>
-                <h2 class="section-title">4 причины выбрать нас</h2>
-                <p class="section-subtitle">Прозрачность, качество, скорость и комплексный подход</p>
-            </div>
-
-            <div class="advantages-grid">
-                <div class="advantage-card">
-                    <div class="advantage-number">01</div>
-                    <div class="advantage-content">
-                        <h3 class="advantage-title">Прозрачность</h3>
-                        <ul class="advantage-list">
-                            <li>Детальная смета без скрытых платежей</li>
-                            <li>Фиксированная цена в договоре</li>
-                            <li>Еженедельные фотоотчёты</li>
-                            <li>Доступ на объект в любое время</li>
-                        </ul>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=75" alt="" class="problem-img">
+                    <div class="problem-body">
+                        <div class="problem-num">01</div>
+                        <h3>Кинут на деньги</h3>
+                        <p>Возьмут предоплату 100%, сделают половину и исчезнут. Или сделают плохо — и не вернут деньги.</p>
                     </div>
                 </div>
-
-                <div class="advantage-card">
-                    <div class="advantage-number">02</div>
-                    <div class="advantage-content">
-                        <h3 class="advantage-title">Качество</h3>
-                        <ul class="advantage-list">
-                            <li>Контроль на каждом этапе</li>
-                            <li>Прораб на объекте каждый день</li>
-                            <li>Фотофиксация скрытых работ</li>
-                            <li>Гарантия 3 года</li>
-                        </ul>
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=75" alt="" class="problem-img">
+                    <div class="problem-body">
+                        <div class="problem-num">02</div>
+                        <h3>Счёт вырастет в 2 раза</h3>
+                        <p>Сначала называют одну цену, потом — «а это не входило», «тут ещё надо». Итоговый чек в 2-3 раза больше сметы.</p>
                     </div>
                 </div>
-
-                <div class="advantage-card">
-                    <div class="advantage-number">03</div>
-                    <div class="advantage-content">
-                        <h3 class="advantage-title">Скорость</h3>
-                        <ul class="advantage-list">
-                            <li>Чёткие сроки в договоре</li>
-                            <li>Штраф за просрочку (0.1%/день)</li>
-                            <li>Быстрый старт (1-2 недели)</li>
-                            <li>Несколько бригад параллельно</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="advantage-card">
-                    <div class="advantage-number">04</div>
-                    <div class="advantage-content">
-                        <h3 class="advantage-title">Комплексный подход</h3>
-                        <ul class="advantage-list">
-                            <li>От дизайна до тапочек</li>
-                            <li>Одна точка ответственности</li>
-                            <li>Закупка материалов</li>
-                            <li>Вывоз мусора и уборка</li>
-                        </ul>
+                <div class="problem-card">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&q=75" alt="" class="problem-img">
+                    <div class="problem-body">
+                        <div class="problem-num">03</div>
+                        <h3>Обещали 2 месяца, делали 5</h3>
+                        <p>Сроки срываются без предупреждений. Бригада пропадает на недели. Жизнь в коробках затягивается.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- Solutions -->
+    <section class="solutions">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Портфолио</div>
-                <h2 class="section-title">Наши работы</h2>
-                <p class="section-subtitle">Реальные объекты, которые мы сдали. Наведите курсор для эффекта «до/после»</p>
+            <div class="section-head">
+                <span class="section-tag">Как мы это решаем</span>
+                <h2 class="section-title">Каждый страх закрыт конкретным механизмом</h2>
+                <p class="section-desc">Не словами, а условиями в договоре</p>
             </div>
-
-            <div class="portfolio-grid">
-                <!-- Проект 1 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/project-1-before.jpg" alt="До ремонта" class="before">
-                        <img src="images/project-1-after.jpg" alt="После ремонта" class="after">
-                        <div class="portfolio-badge">До / После</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">2-комнатная квартира, 54 м²</h3>
-                        <p class="portfolio-description">Капитальный ремонт в новостройке</p>
-                        <div class="portfolio-meta">
-                            <span>📅 Срок: 2.5 месяца</span>
-                            <span>💰 Бюджет: 1 000 000 ₽</span>
-                        </div>
-                    </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-num">01</div>
+                    <h3>Поэтапная оплата</h3>
+                    <p>Никаких 100% вперёд. Платите за каждый завершённый этап — приняли работу, оплатили следующий.</p>
                 </div>
-
-                <!-- Проект 2 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/project-2-before.jpg" alt="До ремонта" class="before">
-                        <img src="images/project-2-after.jpg" alt="После ремонта" class="after">
-                        <div class="portfolio-badge">До / После</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">Студия в центре, 36 м²</h3>
-                        <p class="portfolio-description">Дизайнерский ремонт</p>
-                        <div class="portfolio-meta">
-                            <span>📅 Срок: 2 месяца</span>
-                            <span>💰 Бюджет: 1 000 000 ₽</span>
-                        </div>
-                    </div>
+                <div class="solution-card">
+                    <div class="solution-num">02</div>
+                    <h3>Фиксированная цена</h3>
+                    <p>Детальная смета в договоре. Цена не меняется — изменения только через доп. соглашение с вашей подписью.</p>
                 </div>
-
-                <!-- Проект 3 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/project-3-before.jpg" alt="До ремонта" class="before">
-                        <img src="images/project-3-after.jpg" alt="После ремонта" class="after">
-                        <div class="portfolio-badge">До / После</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">3-комнатная квартира, 80 м²</h3>
-                        <p class="portfolio-description">Комплексный ремонт с перепланировкой</p>
-                        <div class="portfolio-meta">
-                            <span>📅 Срок: 3 месяца</span>
-                            <span>💰 Бюджет: 2 000 000 ₽</span>
-                        </div>
-                    </div>
+                <div class="solution-card">
+                    <div class="solution-num">03</div>
+                    <h3>Штраф за просрочку</h3>
+                    <p>0,1% от суммы договора за каждый день задержки. Сроки зафиксированы — мы рискуем деньгами, не вы.</p>
                 </div>
-            </div>
-
-            <div class="portfolio-cta">
-                <a href="#contact" class="btn btn-primary">Хочу так же — рассчитать смету</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Цены</div>
-                <h2 class="section-title">Прозрачное ценообразование</h2>
-                <p class="section-subtitle">Фиксированная цена в договоре. Никаких скрытых платежей и сюрпризов.</p>
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Эконом -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Эконом</h3>
-                        <p class="pricing-subtitle">Косметический ремонт</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price-amount">8 000</span>
-                        <span class="price-currency">₽/м²</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Демонтаж старой отделки</li>
-                        <li>✓ Покраска стен / поклейка обоев</li>
-                        <li>✓ Укладка ламината</li>
-                        <li>✓ Замена сантехники</li>
-                        <li>✓ Установка дверей</li>
-                        <li class="disabled">✗ Дизайн-проект</li>
-                        <li class="disabled">✗ Авторский надзор</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Рассчитать смету</a>
+                <div class="solution-card">
+                    <div class="solution-num">04</div>
+                    <h3>Еженедельные фотоотчёты</h3>
+                    <p>Каждую неделю — фото и видео с объекта. Видите прогресс, не гадаете. Можете приехать в любое время.</p>
                 </div>
-
-                <!-- Стандарт (рекомендуемый) -->
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Популярный</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Стандарт</h3>
-                        <p class="pricing-subtitle">Капитальный ремонт</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price-amount">15 000</span>
-                        <span class="price-currency">₽/м²</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Всё из пакета Эконом</li>
-                        <li>✓ Стяжка пола, штукатурка стен</li>
-                        <li>✓ Замена электрики и сантехники</li>
-                        <li>✓ Укладка плитки</li>
-                        <li>✓ Монтаж потолков</li>
-                        <li>✓ Гарантия 3 года</li>
-                        <li class="disabled">✗ Дизайн-проект</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Рассчитать смету</a>
+                <div class="solution-card">
+                    <div class="solution-num">05</div>
+                    <h3>Гарантия 3 года</h3>
+                    <p>Если что-то отвалится, треснет или потечёт — устраним бесплатно. Фотофиксация скрытых работ на каждом этапе.</p>
                 </div>
-
-                <!-- Премиум -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Премиум</h3>
-                        <p class="pricing-subtitle">Дизайнерский ремонт</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price-amount">25 000</span>
-                        <span class="price-currency">₽/м²</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Всё из пакета Стандарт</li>
-                        <li>✓ Индивидуальный дизайн-проект</li>
-                        <li>✓ 3D-визуализация</li>
-                        <li>✓ Подбор материалов и мебели</li>
-                        <li>✓ Авторский надзор</li>
-                        <li>✓ Премиум-материалы</li>
-                        <li>✓ Установка мебели и техники</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Рассчитать смету</a>
-                </div>
-            </div>
-
-            <div class="pricing-note">
-                <p>💡 <strong>Не знаете, какой пакет выбрать?</strong></p>
-                <p>Позвоните нам — бесплатно проконсультируем и подберём оптимальный вариант под ваш бюджет.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Как мы работаем</div>
-                <h2 class="section-title">6 простых шагов</h2>
-                <p class="section-subtitle">От первого звонка до сдачи объекта — прозрачный процесс</p>
-            </div>
-
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Заявка и консультация</h3>
-                    <p class="step-description">
-                        Вы оставляете заявку, мы перезваниваем за 15 минут. 
-                        Уточняем детали, отвечаем на вопросы.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Встреча на объекте</h3>
-                    <p class="step-description">
-                        Приезжаем на замер, обсуждаем пожелания. 
-                        Бесплатно и ни к чему не обязывает.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Смета и договор</h3>
-                    <p class="step-description">
-                        Готовим детальную смету за 3-5 дней. 
-                        Подписываем договор с фиксированной ценой.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Старт работ</h3>
-                    <p class="step-description">
-                        Бригада начинает работы через 1-2 недели. 
-                        Прораб на объекте каждый день.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3 class="step-title">Контроль и отчёты</h3>
-                    <p class="step-description">
-                        Еженедельные фотоотчёты. Вы всегда знаете, 
-                        что происходит на объекте.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h3 class="step-title">Сдача и гарантия</h3>
-                    <p class="step-description">
-                        Принимаете работу, подписываем акт. 
-                        Гарантия 3 года на все работы.
-                    </p>
+                <div class="solution-card">
+                    <div class="solution-num">06</div>
+                    <h3>Один подрядчик</h3>
+                    <p>Дизайн, черновые и чистовые работы, материалы, мебель — одна точка ответственности. Не 5 бригад, а одна команда.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
+    <!-- Projects / Portfolio -->
+    <section class="projects" id="projects">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Отзывы</div>
+            <div class="section-head">
+                <span class="section-tag">Знаковые объекты</span>
+                <h2 class="section-title">Реальные проекты</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card project-wide">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Гостиная в современном стиле">
+                    <div class="project-info">
+                        <span class="project-tag">Капитальный ремонт</span>
+                        <h3>2-комнатная квартира, 62 м²</h3>
+                        <p>Срок: 2,5 месяца · Бюджет: 1 200 000 ₽</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Дизайнерская кухня">
+                    <div class="project-info">
+                        <span class="project-tag">Кухня</span>
+                        <h3>Кухня-гостиная, 28 м²</h3>
+                        <p>Срок: 3 недели · Модульный ремонт</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400b0?w=600&q=80" alt="Спальня">
+                    <div class="project-info">
+                        <span class="project-tag">Дизайнерский</span>
+                        <h3>Студия в центре, 36 м²</h3>
+                        <p>Срок: 2 месяца · Бюджет: 900 000 ₽</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Ванная">
+                    <div class="project-info">
+                        <span class="project-tag">Ванная</span>
+                        <h3>Санузел под ключ</h3>
+                        <p>Срок: 2 недели · Модульный ремонт</p>
+                    </div>
+                </div>
+                <div class="project-card project-wide">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80" alt="3-комнатная квартира">
+                    <div class="project-info">
+                        <span class="project-tag">Комплексный ремонт</span>
+                        <h3>3-комнатная квартира, 80 м²</h3>
+                        <p>Срок: 3 месяца · Бюджет: 2 000 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-head centered">
+                <span class="section-tag">Галерея</span>
+                <h2 class="section-title">Наши работы в деталях</h2>
+            </div>
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">Все</button>
+                <button class="gallery-filter" data-filter="living">Гостиные</button>
+                <button class="gallery-filter" data-filter="kitchen">Кухни</button>
+                <button class="gallery-filter" data-filter="bedroom">Спальни</button>
+                <button class="gallery-filter" data-filter="bathroom">Ванные</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-cat="living" data-full="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=70" alt="Гостиная" loading="lazy">
+                    <div class="gallery-cap"><span>Гостиная, минимализм</span></div>
+                </div>
+                <div class="gallery-item g-tall" data-cat="kitchen" data-full="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=70" alt="Кухня" loading="lazy">
+                    <div class="gallery-cap"><span>Кухня-остров</span></div>
+                </div>
+                <div class="gallery-item" data-cat="bedroom" data-full="https://images.unsplash.com/photo-1616594039964-ae9021a400b0?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400b0?w=500&q=70" alt="Спальня" loading="lazy">
+                    <div class="gallery-cap"><span>Спальня с панорамным окном</span></div>
+                </div>
+                <div class="gallery-item" data-cat="bathroom" data-full="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=500&q=70" alt="Ванная" loading="lazy">
+                    <div class="gallery-cap"><span>Ванная, душевая кабина</span></div>
+                </div>
+                <div class="gallery-item g-wide" data-cat="living" data-full="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=70" alt="Гостиная-студия" loading="lazy">
+                    <div class="gallery-cap"><span>Гостиная-студия, 45 м²</span></div>
+                </div>
+                <div class="gallery-item" data-cat="kitchen" data-full="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=70" alt="Кухня" loading="lazy">
+                    <div class="gallery-cap"><span>Скандинавская кухня</span></div>
+                </div>
+                <div class="gallery-item g-tall" data-cat="bedroom" data-full="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=70" alt="Спальня" loading="lazy">
+                    <div class="gallery-cap"><span>Мастер-спальня</span></div>
+                </div>
+                <div class="gallery-item" data-cat="bathroom" data-full="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=500&q=70" alt="Ванная" loading="lazy">
+                    <div class="gallery-cap"><span>Санузел, мрамор + латунь</span></div>
+                </div>
+                <div class="gallery-item" data-cat="living" data-full="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=70" alt="Гостиная" loading="lazy">
+                    <div class="gallery-cap"><span>Гостиная с камином</span></div>
+                </div>
+                <div class="gallery-item" data-cat="kitchen" data-full="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=500&q=70" alt="Кухня" loading="lazy">
+                    <div class="gallery-cap"><span>Модерн, без ручек</span></div>
+                </div>
+                <div class="gallery-item" data-cat="living" data-full="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=500&q=70" alt="Прихожая" loading="lazy">
+                    <div class="gallery-cap"><span>Прихожая, система хранения</span></div>
+                </div>
+                <div class="gallery-item" data-cat="bathroom" data-full="https://images.unsplash.com/photo-1600566753376-12c8ab7c35a7?w=1920&q=80">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7c35a7?w=500&q=70" alt="Душевая" loading="lazy">
+                    <div class="gallery-cap"><span>Душевая, строительное исполнение</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" id="lbClose">&times;</button>
+        <button class="lb-prev" id="lbPrev">&#8249;</button>
+        <button class="lb-next" id="lbNext">&#8250;</button>
+        <img class="lb-img" id="lbImg" src="" alt="">
+        <div class="lb-cap" id="lbCap"></div>
+    </div>
+
+    <!-- How it works -->
+    <section class="how" id="how">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Процесс</span>
+                <h2 class="section-title">3 шага до готовой квартиры</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Бесплатный замер</h3>
+                    <p>Приезжаем на объект, обсуждаем что нужно, замеряем помещения. Без обязательств — просто знакомимся и оцениваем объём работ.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Смета за 1 день</h3>
+                    <p>Детальная смета с разбивкой по работам и материалам. Фиксированная цена в договоре — никаких «примерно» и «может быть».</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Старт через 1-2 недели</h3>
+                    <p>Подписываем договор, бронируем бригаду, закупаем материалы. Через 1-2 недели начинаем — и вы получаете фотоотчёты каждую неделю.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Отзывы</span>
                 <h2 class="section-title">Что говорят клиенты</h2>
-                <p class="section-subtitle">Реальные отзывы людей, которые уже сделали ремонт с нами</p>
             </div>
-
             <div class="reviews-grid">
-                <!-- Отзыв 1 -->
                 <div class="review-card">
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">
-                        «Спасибо за прозрачность! Я всегда знал, что происходит и сколько это стоит. 
-                        Каждую неделю присылали фотоотчёт. Рекомендую!»
-                    </p>
+                    <div class="review-stars">★★★★★</div>
+                    <p>«Капитальный ремонт двушки 62 м². Уложились в смету и в срок — 2,5 месяца. Каждую неделю присылали фото, я видел что происходит. Единственный раз за весь ремонт не пришлось ругаться.»</p>
                     <div class="review-author">
-                        <div class="author-avatar">И</div>
-                        <div class="author-info">
-                            <div class="author-name">Иван</div>
-                            <div class="author-project">Ремонт 54 м², пакет Стандарт</div>
-                        </div>
+                        <strong>Алексей М.</strong>
+                        <span>Двушка, капитальный ремонт</span>
                     </div>
                 </div>
-
-                <!-- Отзыв 2 -->
                 <div class="review-card">
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">
-                        «Ремонт за 2 месяца — как и обещали. Качество отличное, цена не изменилась. 
-                        Очень довольна результатом!»
-                    </p>
+                    <div class="review-stars">★★★★★</div>
+                    <p>«Делали ванную и кухню — модульный подход, не стали переделывать всю квартиру. Смета чёткая, ни рубля сверху. Плитка идеальная, сантехника работает. Рекомендую знакомым.»</p>
                     <div class="review-author">
-                        <div class="author-avatar">М</div>
-                        <div class="author-info">
-                            <div class="author-name">Мария</div>
-                            <div class="author-project">Ремонт 36 м², пакет Премиум</div>
-                        </div>
+                        <strong>Марина К.</strong>
+                        <span>Ванная + кухня, модульный ремонт</span>
                     </div>
                 </div>
-
-                <!-- Отзыв 3 -->
                 <div class="review-card">
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">
-                        «Боялась, что смета вырастет в процессе, но цена осталась фиксированной. 
-                        Прораб всегда на связи, все вопросы решались быстро.»
-                    </p>
+                    <div class="review-stars">★★★★★</div>
+                    <p>«Квартира под сдачу — нужно было быстро и недорого. Косметика студии за 3 недели, уложились в бюджет. Квартира сдалась за первую неделю. Окупится за 4 месяца.»</p>
                     <div class="review-author">
-                        <div class="author-avatar">Е</div>
-                        <div class="author-info">
-                            <div class="author-name">Елена</div>
-                            <div class="author-project">Ремонт 80 м², пакет Стандарт</div>
-                        </div>
+                        <strong>Дмитрий В.</strong>
+                        <span>Студия, косметический ремонт</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="cta-aurora">
-            <div class="aurora-beam"></div>
-            <div class="aurora-beam"></div>
-        </div>
+    <!-- CTA -->
+    <section class="cta" id="cta">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Узнайте точную стоимость за 2 минуты</h2>
-                <p class="cta-subtitle">
-                    Пройдите короткий квиз-калькулятор — получите расчёт стоимости вашего ремонта
-                    с точностью до 15%. Фиксированная цена в договоре.
-                </p>
-                <div class="cta-features">
-                    <div class="cta-feature">
-                        <span class="feature-icon">✓</span>
-                        <span>Расчёт за 2 минуты</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="feature-icon">✓</span>
-                        <span>Фиксированная цена</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="feature-icon">✓</span>
-                        <span>Гарантия 3 года</span>
-                    </div>
-                </div>
-                <a href="quiz.html" class="btn btn-primary" style="margin-top: 2rem;">Пройти квиз-калькулятор</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2 class="section-title">Свяжитесь с нами</h2>
-                    <p class="contact-description">
-                        Оставьте заявку или позвоните — ответим на все вопросы 
-                        и рассчитаем стоимость вашего ремонта.
-                    </p>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">📞</div>
-                            <div class="method-info">
-                                <div class="method-label">Телефон</div>
-                                <a href="tel:+79991234567" class="method-value">+7 (999) 123-45-67</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="method-icon">✉️</div>
-                            <div class="method-info">
-                                <div class="method-label">Email</div>
-                                <a href="mailto:info@remontpro.ru" class="method-value">info@remontpro.ru</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="method-icon">💬</div>
-                            <div class="method-info">
-                                <div class="method-label">Telegram</div>
-                                <a href="https://t.me/remontpro" class="method-value">@remontpro</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="method-icon">📍</div>
-                            <div class="method-info">
-                                <div class="method-label">Адрес</div>
-                                <div class="method-value">Москва, работаем по всей Москве и области</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-social">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Telegram</a>
-                        <a href="#" class="social-link">WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <h3 class="form-title">Оставьте заявку</h3>
-                        <p class="form-subtitle">Перезвоним за 15 минут</p>
-
-                        <div class="form-group">
-                            <label for="name" class="form-label">Ваше имя</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Иван" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Телефон</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (999) 123-45-67" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="area" class="form-label">Площадь квартиры (м²)</label>
-                            <input type="number" id="area" name="area" class="form-input" placeholder="50">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service" class="form-label">Тип ремонта</label>
-                            <select id="service" name="service" class="form-input">
-                                <option value="">Не знаю, нужна консультация</option>
-                                <option value="econom">Косметический (Эконом)</option>
-                                <option value="standard">Капитальный (Стандарт)</option>
-                                <option value="premium">Дизайнерский (Премиум)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="form-label">Комментарий (необязательно)</label>
-                            <textarea id="message" name="message" class="form-input" rows="3" placeholder="Расскажите о вашем проекте..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
-
-                        <p class="form-note">
-                            Нажимая кнопку, вы соглашаетесь с
-                            <a href="privacy.html">политикой конфиденциальности</a>
-                        </p>
-                    </form>
-                </div>
+            <div class="cta-box">
+                <h2>Получите смету за 1 день</h2>
+                <p>Оставьте email — отправим детальную смету для вашей площади. Без звонков и спама.</p>
+                <form class="cta-form" id="ctaForm">
+                    <input type="email" placeholder="Ваш email" required aria-label="Email для сметы">
+                    <button type="submit" class="btn btn-primary">Получить смету</button>
+                </form>
+                <p class="cta-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></p>
             </div>
         </div>
     </section>
@@ -663,63 +385,42 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">🔨</span>
-                        <span class="logo-text">РемонтПро</span>
-                    </div>
-                    <p class="footer-description">
-                        Комплексный ремонт квартир в Москве.<br>
-                        От дизайна до тапочек с гарантией 3 года.
-                    </p>
+                    <span class="footer-logo">РемонтПро</span>
+                    <p>Комплексный ремонт квартир в Москве. От дизайна до тапочек с гарантией 3 года.</p>
                 </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-title">Услуги</h4>
-                        <ul>
-                            <li><a href="#services">Дизайн-проект</a></li>
-                            <li><a href="#services">Черновая отделка</a></li>
-                            <li><a href="#services">Чистовая отделка</a></li>
-                            <li><a href="#services">Мебель и техника</a></li>
-                        </ul>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Навигация</h4>
+                        <a href="#projects">Проекты</a>
+                        <a href="#gallery">Галерея</a>
+                        <a href="#how">Как работаем</a>
+                        <a href="#reviews">Отзывы</a>
                     </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-title">Компания</h4>
-                        <ul>
-                            <li><a href="#portfolio">Портфолио</a></li>
-                            <li><a href="#reviews">Отзывы</a></li>
-                            <li><a href="#pricing">Цены</a></li>
-                            <li><a href="dashboard.html">Прозрачность</a></li>
-                            <li><a href="#contact">Контакты</a></li>
-                        </ul>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <a href="tel:+79261162631">+7 (926) 116-26-31</a>
+                        <a href="mailto:info@remontpro.ru">info@remontpro.ru</a>
+                        <a href="https://t.me/remontpro">Telegram</a>
                     </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-title">Контакты</h4>
-                        <ul>
-                            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-                            <li><a href="mailto:info@remontpro.ru">info@remontpro.ru</a></li>
-                            <li><a href="https://t.me/remontpro">Telegram</a></li>
-                            <li><a href="#">Instagram</a></li>
-                        </ul>
+                    <div class="footer-col">
+                        <h4>Документы</h4>
+                        <a href="privacy.html">Политика конфиденциальности</a>
+                        <a href="dashboard.html">Прозрачность</a>
+                        <a href="quiz.html">Калькулятор ремонта</a>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 РемонтПро. Все права защищены.</p>
-                <p><a href="privacy.html">Политика конфиденциальности</a></p>
+                <span>© 2026 РемонтПро. Все права защищены.</span>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/79991234567" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-        <span class="whatsapp-icon">💬</span>
-        <span class="whatsapp-text">Написать в WhatsApp</span>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/79261162631" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <span>💬</span> WhatsApp
     </a>
 
     <script src="script.js"></script>

@@ -1,327 +1,166 @@
-// РемонтПро — Scripts
-// Spotlight, 3D Tilt, Loading, Scroll Reveal
+// РемонтПро — Main Scripts
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-    // ===================================
-    // Loading Screen
-    // ===================================
-    const loadingScreen = document.getElementById('loadingScreen');
-    window.addEventListener('load', function () {
-        setTimeout(function () {
-            loadingScreen.classList.add('loaded');
-        }, 300);
+    // Header scroll
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+        header.classList.toggle('scrolled', window.pageYOffset > 50);
     });
 
-    // Fallback: hide loading after 3s max
-    setTimeout(function () {
-        loadingScreen.classList.add('loaded');
-    }, 3000);
-
-    // ===================================
-    // Header Scroll Effect
-    // ===================================
-    const header = document.querySelector('.header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function () {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        lastScroll = currentScroll;
-    });
-
-    // ===================================
-    // Smooth Scroll for Navigation Links
-    // ===================================
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener('click', function (e) {
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            var t = document.querySelector(this.getAttribute('href'));
+            if (t) {
+                window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
             }
         });
     });
 
-    // ===================================
-    // Spotlight Effect (cursor follower)
-    // ===================================
-    const spotlight = document.getElementById('spotlight');
-    const hero = document.querySelector('.hero');
+    // Hero Slider
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    var cur = 0;
+    var timer;
 
-    if (spotlight && hero) {
-        hero.addEventListener('mousemove', function (e) {
-            const rect = hero.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            spotlight.style.background = 'radial-gradient(600px circle at ' + x + 'px ' + y + 'px, rgba(201, 169, 98, 0.06), transparent 60%)';
-        });
-
-        hero.addEventListener('mouseleave', function () {
-            spotlight.style.background = 'transparent';
-        });
+    function goSlide(i) {
+        slides.forEach(function(s) { s.classList.remove('active'); });
+        dots.forEach(function(d) { d.classList.remove('active'); });
+        slides[i].classList.add('active');
+        dots[i].classList.add('active');
+        cur = i;
     }
 
-    // ===================================
-    // 3D Tilt Effect on Cards
-    // ===================================
-    var tiltCards = document.querySelectorAll('.service-card, .advantage-card, .portfolio-card, .pricing-card, .review-card');
+    function nextSlide() { goSlide((cur + 1) % slides.length); }
 
-    tiltCards.forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-            var rect = card.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            var centerX = rect.width / 2;
-            var centerY = rect.height / 2;
-            var rotateX = ((y - centerY) / centerY) * -4;
-            var rotateY = ((x - centerX) / centerX) * 4;
+    function startSlider() { timer = setInterval(nextSlide, 5000); }
 
-            card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
-        });
-
-        card.addEventListener('mouseleave', function () {
-            card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            clearInterval(timer);
+            goSlide(parseInt(this.dataset.slide));
+            startSlider();
         });
     });
 
-    // ===================================
-    // Scroll Reveal Animation
-    // ===================================
-    var revealElements = document.querySelectorAll(
-        '.service-card, .advantage-card, .portfolio-card, .pricing-card, ' +
-        '.review-card, .process-step, .problem-item, .section-header, ' +
-        '.contact-method, .problem-solution'
-    );
+    if (slides.length) startSlider();
 
-    // Add reveal class
-    revealElements.forEach(function (el) {
-        el.classList.add('reveal');
-    });
-
-    var revealObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+    // Stats counter animation
+    var statEls = document.querySelectorAll('[data-count]');
+    var statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
+                var el = entry.target;
+                var target = parseInt(el.dataset.count);
+                if (target === 0) { el.textContent = '0'; statsObserver.unobserve(el); return; }
+                var duration = 1500, steps = 50, inc = target / steps, cur = 0;
+                var t = setInterval(function() {
+                    cur += inc;
+                    if (cur >= target) { el.textContent = target; clearInterval(t); }
+                    else { el.textContent = Math.floor(cur); }
+                }, duration / steps);
+                statsObserver.unobserve(el);
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -60px 0px'
-    });
+    }, { threshold: 0.3 });
+    statEls.forEach(function(el) { statsObserver.observe(el); });
 
-    revealElements.forEach(function (el) {
-        revealObserver.observe(el);
-    });
+    // Gallery filters
+    var filterBtns = document.querySelectorAll('.gallery-filter');
+    var items = document.querySelectorAll('.gallery-item');
 
-    // ===================================
-    // Portfolio Image Hover Effect
-    // ===================================
-    document.querySelectorAll('.portfolio-card').forEach(function (card) {
-        var beforeImg = card.querySelector('.before');
-        var afterImg = card.querySelector('.after');
-
-        if (beforeImg && afterImg) {
-            card.addEventListener('mouseenter', function () {
-                beforeImg.style.opacity = '0';
-                afterImg.style.opacity = '1';
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            var f = this.dataset.filter;
+            items.forEach(function(item) {
+                item.classList.toggle('hidden', f !== 'all' && item.dataset.cat !== f);
             });
-            card.addEventListener('mouseleave', function () {
-                beforeImg.style.opacity = '1';
-                afterImg.style.opacity = '0';
-            });
-        }
+        });
     });
 
-    // ===================================
-    // Form Submission
-    // ===================================
-    var contactForm = document.getElementById('contactForm');
+    // Lightbox
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    var lbCap = document.getElementById('lbCap');
+    var lbIdx = 0;
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+    function getVisible() {
+        return Array.from(items).filter(function(i) { return !i.classList.contains('hidden'); });
+    }
+
+    function openLB(idx) {
+        var vis = getVisible();
+        lbIdx = idx;
+        lbImg.src = vis[idx].dataset.full;
+        var cap = vis[idx].querySelector('.gallery-cap span');
+        lbCap.textContent = cap ? cap.textContent : '';
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLB() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function navLB(dir) {
+        var vis = getVisible();
+        lbIdx = (lbIdx + dir + vis.length) % vis.length;
+        lbImg.src = vis[lbIdx].dataset.full;
+        var cap = vis[lbIdx].querySelector('.gallery-cap span');
+        lbCap.textContent = cap ? cap.textContent : '';
+    }
+
+    items.forEach(function(item) {
+        item.addEventListener('click', function() {
+            var vis = getVisible();
+            var idx = vis.indexOf(item);
+            if (idx !== -1) openLB(idx);
+        });
+    });
+
+    document.getElementById('lbClose').addEventListener('click', closeLB);
+    document.getElementById('lbPrev').addEventListener('click', function() { navLB(-1); });
+    document.getElementById('lbNext').addEventListener('click', function() { navLB(1); });
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLB(); });
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLB();
+        if (e.key === 'ArrowLeft') navLB(-1);
+        if (e.key === 'ArrowRight') navLB(1);
+    });
+
+    // Reveal on scroll
+    var revealObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+    // CTA form
+    var ctaForm = document.getElementById('ctaForm');
+    if (ctaForm) {
+        ctaForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
-            var formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                area: document.getElementById('area').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-
-            if (!formData.name || !formData.phone) {
-                showAlert('Пожалуйста, заполните имя и телефон', 'error');
-                return;
-            }
-
-            var submitBtn = contactForm.querySelector('button[type="submit"]');
-            var originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Отправка...';
-            submitBtn.disabled = true;
-
-            var API_URL = window.API_URL || 'https://remont-9361581.msk1.amvera.tech';
-
-            fetch(API_URL + '/api/leads', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(Object.assign({}, formData, { source: 'landing' }))
-            })
-            .then(function (res) { return res.json(); })
-            .then(function (data) {
-                if (data.ok) {
-                    showAlert('Спасибо! Мы перезвоним в течение 15 минут.', 'success');
-                    contactForm.reset();
-                } else {
-                    showAlert('Произошла ошибка. Попробуйте позвонить нам.', 'error');
-                }
-            })
-            .catch(function () {
-                showAlert('Спасибо! Мы перезвоним в течение 15 минут.', 'success');
-            })
-            .finally(function () {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
-        });
-    }
-
-    // ===================================
-    // Phone Number Formatting
-    // ===================================
-    var phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function (e) {
-            var value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value[0] === '7' || value[0] === '8') {
-                    value = value.substring(1);
-                }
-                var formatted = '+7';
-                if (value.length > 0) formatted += ' (' + value.substring(0, 3);
-                if (value.length >= 3) formatted += ') ' + value.substring(3, 6);
-                if (value.length >= 6) formatted += '-' + value.substring(6, 8);
-                if (value.length >= 8) formatted += '-' + value.substring(8, 10);
-                e.target.value = formatted;
-            }
-        });
-    }
-
-    // ===================================
-    // Form Validation Visual Feedback
-    // ===================================
-    var formInputs = document.querySelectorAll('.form-input[required]');
-    formInputs.forEach(function (input) {
-        input.addEventListener('blur', function () {
-            if (this.value.trim() === '') {
-                this.style.borderColor = '#f87171';
-            } else {
-                this.style.borderColor = '';
-            }
-        });
-        input.addEventListener('focus', function () {
-            this.style.borderColor = '';
-        });
-    });
-
-    // ===================================
-    // Counter Animation
-    // ===================================
-    var counters = document.querySelectorAll('.feature-value');
-    var counterObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    counters.forEach(function (counter) { counterObserver.observe(counter); });
-
-    function animateCounter(element) {
-        var text = element.textContent;
-        var hasNumber = /\d/.test(text);
-        if (!hasNumber) return;
-
-        var number = parseInt(text.replace(/\D/g, ''));
-        if (isNaN(number) || number === 0) return;
-
-        var suffix = text.replace(/[\d\s]/g, '');
-        var duration = 2000;
-        var steps = 60;
-        var increment = number / steps;
-        var stepDuration = duration / steps;
-
-        var current = 0;
-        var timer = setInterval(function () {
-            current += increment;
-            if (current >= number) {
-                element.textContent = text;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current) + suffix;
-            }
-        }, stepDuration);
-    }
-
-    // ===================================
-    // Mobile Menu Toggle
-    // ===================================
-    var menuToggle = document.querySelector('.menu-toggle');
-    var navMenu = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            var btn = this.querySelector('.btn');
+            var input = this.querySelector('input');
+            btn.textContent = 'Отправлено!';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            input.value = '';
+            setTimeout(function() {
+                btn.textContent = 'Получить смету';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 3000);
         });
     }
 });
-
-// ===================================
-// Alert Utility
-// ===================================
-function showAlert(message, type) {
-    type = type || 'info';
-    var alert = document.createElement('div');
-    alert.className = 'custom-alert custom-alert-' + type;
-    var content = document.createElement('div');
-    content.className = 'alert-content';
-    var icon = document.createElement('span');
-    icon.className = 'alert-icon';
-    icon.textContent = type === 'success' ? '\u2713' : type === 'error' ? '\u2717' : '\u2139';
-    var msg = document.createElement('span');
-    msg.className = 'alert-message';
-    msg.textContent = message;
-    content.appendChild(icon);
-    content.appendChild(msg);
-    alert.appendChild(content);
-
-    var style = document.createElement('style');
-    style.textContent =
-        '.custom-alert{position:fixed;top:80px;right:20px;background:#1a1a24;color:#e5e5e5;padding:1.25rem 1.75rem;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);z-index:10000;animation:alertSlideIn 0.3s ease;max-width:380px;border:1px solid rgba(255,255,255,0.06)}' +
-        '.custom-alert-success{border-left:3px solid #22c55e}' +
-        '.custom-alert-error{border-left:3px solid #f87171}' +
-        '.custom-alert-info{border-left:3px solid #60a5fa}' +
-        '.alert-content{display:flex;align-items:center;gap:0.75rem}' +
-        '.alert-icon{font-size:1.25rem;font-weight:bold}' +
-        '.alert-message{font-size:0.9375rem;line-height:1.5}' +
-        '@keyframes alertSlideIn{from{transform:translateX(400px);opacity:0}to{transform:translateX(0);opacity:1}}' +
-        '@keyframes alertSlideOut{from{transform:translateX(0);opacity:1}to{transform:translateX(400px);opacity:0}}';
-    document.head.appendChild(style);
-    document.body.appendChild(alert);
-
-    setTimeout(function () {
-        alert.style.animation = 'alertSlideOut 0.3s ease';
-        setTimeout(function () { alert.remove(); }, 300);
-    }, 5000);
-}
