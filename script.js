@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var lbIdx = 0;
 
     function getVisible() {
-        return Array.from(items).filter(function(i) { return !i.classList.contains('hidden'); });
+        return Array.from(items).filter(function(i) { return !i.classList.contains('hidden') && i.dataset.full; });
     }
 
     function openLB(idx) {
@@ -117,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     items.forEach(function(item) {
         item.addEventListener('click', function() {
-            var vis = getVisible();
+            if (!item.dataset.full) return;
+            var vis = getVisible().filter(function(i) { return i.dataset.full; });
             var idx = vis.indexOf(item);
             if (idx !== -1) openLB(idx);
         });
