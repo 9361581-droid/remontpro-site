@@ -95,14 +95,13 @@ ul, ol { list-style: none; }
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-size: 1.25rem;
-    font-weight: 700;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
 }
 
-.logo-icon { font-size: 1.5rem; }
-.logo-text { color: var(--text-primary); }
+.logo-text { font-size: 1.5rem; font-weight: 700; color: var(--accent, #1e3a5f); letter-spacing: -0.03em; line-height: 1; }
+.logo-sub { font-size: 0.5625rem; font-weight: 500; color: #9ca3af; letter-spacing: 0.12em; text-transform: uppercase; }
 
 .nav-menu {
     display: flex;
@@ -582,13 +581,11 @@ section { padding: var(--section-padding) 0; }
 
 .footer-logo {
     display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-size: 1.25rem;
-    font-weight: 700;
+    flex-direction: column;
+    gap: 2px;
 }
 
-.footer-logo .logo-text { color: #ffffff; }
+.footer-logo .logo-text { font-size: 1.5rem; font-weight: 700; color: #ffffff; letter-spacing: -0.03em; line-height: 1; }
 
 .footer-links { display: flex; gap: 1.5rem; }
 

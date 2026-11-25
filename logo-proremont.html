@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логотип ПроРемонт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .logo-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .logo-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        svg {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo-card">
+    <div class="logo-label">ПроРемонт — буква Р как ключ</div>
+    <svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- Вертикальная линия буквы Р (ствол ключа) -->
+        <path d="M20,20 L20,95" stroke="#1e3a5f" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Изогнутая часть буквы Р (петля ключа) -->
+        <path d="M20,20 L45,20 C60,20 60,50 45,50 L20,50" 
+              stroke="#1e3a5f" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Зубцы ключа -->
+        <line x1="20" y1="65" x2="30" y2="65" stroke="#c9a962" stroke-width="4" stroke-linecap="round"/>
+        <line x1="20" y1="80" x2="28" y2="80" stroke="#c9a962" stroke-width="4" stroke-linecap="round"/>
+        
+        <!-- Текст «Ремонт» -->
+        <text x="70" y="58" font-family="Inter, sans-serif" font-weight="700" font-size="48" fill="#1e3a5f" letter-spacing="-0.02em">Ремонт</text>
+    </svg>
+</div>
+
+<div class="logo-card">
+    <div class="logo-label">ПроРемонт — петля-ключ крупнее</div>
+    <svg width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- Вертикальная линия буквы Р (ствол ключа) -->
+        <path d="M20,15 L20,100" stroke="#1e3a5f" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- Изогнутая часть буквы Р (петля ключа) -->
+        <path d="M20,15 L55,15 C72,15 72,48 55,48 L20,48" 
+              stroke="#1e3a5f" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Зубцы ключа -->
+        <line x1="20" y1="68" x2="32" y2="68" stroke="#c9a962" stroke-width="5" stroke-linecap="round"/>
+        <line x1="20" y1="85" x2="30" y2="85" stroke="#c9a962" stroke-width="5" stroke-linecap="round"/>
+        
+        <!-- Текст «Ремонт» -->
+        <text x="80" y="58" font-family="Inter, sans-serif" font-weight="700" font-size="48" fill="#1e3a5f" letter-spacing="-0.02em">Ремонт</text>
+    </svg>
+</div>
+
+</body>
+</html>

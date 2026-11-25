@@ -55,9 +55,9 @@
             max-width: 1200px;
         }
 
-        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-        .logo-icon { font-size: 1.5rem; }
-        .logo-text { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+        .logo { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: #1e3a5f; letter-spacing: -0.03em; line-height: 1; }
+        .logo-sub { font-size: 0.5625rem; font-weight: 500; color: #9ca3af; letter-spacing: 0.12em; text-transform: uppercase; }
 
         .back-link { color: var(--accent); }
 
@@ -135,8 +135,8 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🔨</span>
                 <span class="logo-text">РемонтПро</span>
+                <span class="logo-sub">ремонт квартир</span>
             </a>
             <a href="index.html" class="back-link">← На главную</a>
         </div>

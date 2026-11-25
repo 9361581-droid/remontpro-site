@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РемонтПро — Логотип (финальные варианты)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f5f5f5; padding: 40px; display: flex; flex-direction: column; gap: 36px; }
+        .card { background: #fff; padding: 36px 40px; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+        .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #bbb; margin-bottom: 6px; }
+        .desc { font-size: 12px; color: #888; margin-bottom: 20px; line-height: 1.5; }
+        svg { display: block; }
+        .row { display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; }
+        .context { font-size: 10px; color: #ccc; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+
+        /* Navbar mock */
+        .navbar { display: flex; align-items: center; gap: 10px; padding: 12px 20px; border: 1px solid #eee; border-radius: 8px; }
+        .navbar .links { margin-left: auto; font-size: 12px; color: #999; display: flex; gap: 16px; }
+
+        /* Dark card */
+        .card.dark { background: #1a1a1a; }
+        .card.dark .label { color: #555; }
+        .card.dark .desc { color: #666; }
+        .card.dark .navbar { border-color: #333; }
+        .card.dark .navbar .links { color: #666; }
+    </style>
+</head>
+<body>
+
+<!-- Вариант A: Скрытый ключ в букве Р -->
+<div class="card">
+    <div class="label">A — Скрытый ключ</div>
+    <div class="desc">Буква Р в «РемонтПро» — обычная типографская Р, но её вертикальная линия уходит ниже baseline и превращается в стержень ключа с двумя зубцами. При первом взгляде — просто текст. При втором — ключ.</div>
+    <div class="row">
+        <div>
+            <div class="context">Логотип</div>
+            <svg width="360" height="70" viewBox="0 0 360 70">
+                <!-- Обычный текст "РемонтПро", но Р нарисована вручную -->
+                <!-- Буква Р с продолжением вниз -->
+                <path d="M12,10 L12,56" stroke="#1e3a5f" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+                <path d="M12,10 L26,10 C35,10 35,28 26,28 L12,28" stroke="#1e3a5f" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Зубцы ключа (ниже baseline) -->
+                <line x1="12" y1="40" x2="19" y2="40" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+                <line x1="12" y1="49" x2="17" y2="49" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- Остальной текст -->
+                <text x="38" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#1a1a1a" letter-spacing="-0.02em">емонтПро</text>
+            </svg>
+        </div>
+        <div>
+            <div class="context">Навбар</div>
+            <div class="navbar">
+                <svg width="160" height="32" viewBox="0 0 360 70">
+                    <path d="M12,10 L12,56" stroke="#1e3a5f" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+                    <path d="M12,10 L26,10 C35,10 35,28 26,28 L12,28" stroke="#1e3a5f" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="12" y1="40" x2="19" y2="40" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="12" y1="49" x2="17" y2="49" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+                    <text x="38" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#1a1a1a" letter-spacing="-0.02em">емонтПро</text>
+                </svg>
+                <div class="links">Услуги &nbsp; Портфолио &nbsp; Цены &nbsp; Контакты</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Вариант B: Линия крыши над текстом -->
+<div class="card">
+    <div class="label">B — Линия крыши</div>
+    <div class="desc">Тонкая линия-уголок над текстом — силуэт крыши, одна линия. Минимальный жест, превращающий слово в логотип. Как Nike swoosh — один штрих меняет всё.</div>
+    <div class="row">
+        <div>
+            <div class="context">Логотип</div>
+            <svg width="320" height="60" viewBox="0 0 320 60">
+                <!-- Линия крыши -->
+                <path d="M100,6 L160,0 L220,6" stroke="#c9a962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Текст -->
+                <text x="60" y="42" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#1e3a5f" letter-spacing="-0.02em">РемонтПро</text>
+            </svg>
+        </div>
+        <div>
+            <div class="context">Навбар</div>
+            <div class="navbar">
+                <svg width="160" height="28" viewBox="0 0 320 60">
+                    <path d="M100,6 L160,0 L220,6" stroke="#c9a962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <text x="60" y="42" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#1e3a5f" letter-spacing="-0.02em">РемонтПро</text>
+                </svg>
+                <div class="links">Услуги &nbsp; Портфолио &nbsp; Цены &nbsp; Контакты</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Вариант C: Ключ-разделитель между Ремонт и Про -->
+<div class="card">
+    <div class="label">C — Ключ-разделитель</div>
+    <div class="desc">Горизонтальный ключ лежит между «Ремонт» и «Про» — как тире, но с зубцами. Разделяет слово на две части и одновременно связывает их.</div>
+    <div class="row">
+        <div>
+            <div class="context">Логотип</div>
+            <svg width="360" height="44" viewBox="0 0 360 44">
+                <!-- Текст "Ремонт" -->
+                <text x="0" y="32" font-family="Inter, sans-serif" font-weight="600" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">Ремонт</text>
+                <!-- Горизонтальный ключ между словами -->
+                <circle cx="150" cy="22" r="6" stroke="#c9a962" stroke-width="2" fill="none"/>
+                <line x1="156" y1="22" x2="185" y2="22" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                <line x1="178" y1="22" x2="178" y2="16" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                <line x1="183" y1="22" x2="183" y2="17" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                <!-- Текст "Про" -->
+                <text x="193" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1e3a5f" letter-spacing="-0.02em">Про</text>
+            </svg>
+        </div>
+        <div>
+            <div class="context">Навбар</div>
+            <div class="navbar">
+                <svg width="160" height="24" viewBox="0 0 360 44">
+                    <text x="0" y="32" font-family="Inter, sans-serif" font-weight="600" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">Ремонт</text>
+                    <circle cx="150" cy="22" r="6" stroke="#c9a962" stroke-width="2" fill="none"/>
+                    <line x1="156" y1="22" x2="185" y2="22" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="178" y1="22" x2="178" y2="16" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="183" y1="22" x2="183" y2="17" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <text x="193" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1e3a5f" letter-spacing="-0.02em">Про</text>
+                </svg>
+                <div class="links">Услуги &nbsp; Портфолио &nbsp; Цены &nbsp; Контакты</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Вариант D: Дом-квадрат -->
+<div class="card">
+    <div class="label">D — Квадрат-квартира</div>
+    <div class="desc">Квадрат со скруглёнными углами, внутри — силуэт крыши одной линией. Квадрат = квартира, план, чертёж. Крыша внутри = дом, уют. Рядом — текст.</div>
+    <div class="row">
+        <div>
+            <div class="context">Логотип</div>
+            <svg width="340" height="48" viewBox="0 0 340 48">
+                <!-- Квадрат -->
+                <rect x="4" y="4" width="36" height="36" rx="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+                <!-- Крыша внутри -->
+                <path d="M12,26 L22,14 L32,26" stroke="#c9a962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Текст -->
+                <text x="52" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">РемонтПро</text>
+            </svg>
+        </div>
+        <div>
+            <div class="context">Навбар</div>
+            <div class="navbar">
+                <svg width="160" height="28" viewBox="0 0 340 48">
+                    <rect x="4" y="4" width="36" height="36" rx="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+                    <path d="M12,26 L22,14 L32,26" stroke="#c9a962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <text x="52" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">РемонтПро</text>
+                </svg>
+                <div class="links">Услуги &nbsp; Портфолио &nbsp; Цены &nbsp; Контакты</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Вариант E: Золотая точка-запятая -->
+<div class="card">
+    <div class="label">E — Золотая точка</div>
+    <div class="desc">Чистый вордмарк + маленькая золотая точка после текста. Как точка в конце предложения — уверенность, завершённость. Минимум графики, максимум типографики.</div>
+    <div class="row">
+        <div>
+            <div class="context">Логотип</div>
+            <svg width="320" height="44" viewBox="0 0 320 44">
+                <text x="0" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">РемонтПро</text>
+                <circle cx="244" cy="34" r="4" fill="#c9a962"/>
+            </svg>
+        </div>
+        <div>
+            <div class="context">Навбар</div>
+            <div class="navbar">
+                <svg width="150" height="24" viewBox="0 0 320 44">
+                    <text x="0" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#1a1a1a" letter-spacing="-0.02em">РемонтПро</text>
+                    <circle cx="244" cy="34" r="4" fill="#c9a962"/>
+                </svg>
+                <div class="links">Услуги &nbsp; Портфолио &nbsp; Цены &nbsp; Контакты</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Тёмный фон -->
+<div class="card dark">
+    <div class="label">На тёмном фоне (футер)</div>
+    <div class="desc">Варианты A и C на тёмном фоне.</div>
+    <div class="row">
+        <div>
+            <div class="context">A — Скрытый ключ</div>
+            <div class="navbar">
+                <svg width="160" height="28" viewBox="0 0 360 70">
+                    <path d="M12,10 L12,56" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+                    <path d="M12,10 L26,10 C35,10 35,28 26,28 L12,28" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="12" y1="40" x2="19" y2="40" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="12" y1="49" x2="17" y2="49" stroke="#c9a962" stroke-width="3" stroke-linecap="round"/>
+                    <text x="38" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="-0.02em">емонтПро</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="context">C — Ключ-разделитель</div>
+            <div class="navbar">
+                <svg width="160" height="24" viewBox="0 0 360 44">
+                    <text x="0" y="32" font-family="Inter, sans-serif" font-weight="600" font-size="28" fill="#fff" letter-spacing="-0.02em">Ремонт</text>
+                    <circle cx="150" cy="22" r="6" stroke="#c9a962" stroke-width="2" fill="none"/>
+                    <line x1="156" y1="22" x2="185" y2="22" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="178" y1="22" x2="178" y2="16" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="183" y1="22" x2="183" y2="17" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+                    <text x="193" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#c9a962" letter-spacing="-0.02em">Про</text>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div class="context">B — Линия крыши</div>
+            <div class="navbar">
+                <svg width="160" height="28" viewBox="0 0 320 60">
+                    <path d="M100,6 L160,0 L220,6" stroke="#c9a962" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <text x="60" y="42" font-family="Inter, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="-0.02em">РемонтПро</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

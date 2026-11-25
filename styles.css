@@ -64,8 +64,9 @@ img { max-width: 100%; display: block; }
 
 .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 
-.logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
-.logo-text { color: var(--text); }
+.logo { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
+.logo-text { font-size: 1.5rem; font-weight: 700; color: var(--accent); letter-spacing: -0.03em; line-height: 1; }
+.logo-sub { font-size: 0.5625rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.12em; text-transform: uppercase; }
 
 .nav-menu { display: flex; gap: 2rem; list-style: none; }
 .nav-menu a { font-size: 0.875rem; font-weight: 500; color: var(--text-2); }
@@ -632,7 +633,8 @@ img { max-width: 100%; display: block; }
     gap: 3rem; margin-bottom: 2rem;
 }
 
-.footer-logo { font-size: 1.25rem; font-weight: 700; color: #fff; display: block; margin-bottom: 0.75rem; }
+.footer-logo { font-size: 1.5rem; font-weight: 700; color: #fff; letter-spacing: -0.03em; line-height: 1; }
+.footer-logo-sub { font-size: 0.5625rem; font-weight: 500; color: rgba(255,255,255,0.4); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
 .footer-brand p { color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.7; max-width: 280px; }
 
 .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }

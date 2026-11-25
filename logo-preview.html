@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РемонтПро — Варианты ключа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #fafafa; padding: 40px 32px; color: #1a1a1a; }
+h1 { font-size: 20px; font-weight: 600; color: #333; margin-bottom: 6px; }
+.subtitle { font-size: 13px; color: #999; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; max-width: 900px; }
+
+.card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 24px 28px; }
+.card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #bbb; margin-bottom: 4px; }
+.card-desc { font-size: 12px; color: #888; margin-bottom: 18px; line-height: 1.5; }
+
+.showcase { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+
+.icon-block svg { width: 56px; height: 56px; }
+
+.nav-mock { display: flex; align-items: center; gap: 10px; padding: 10px 18px; background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; }
+.nav-mock svg { width: 26px; height: 26px; flex-shrink: 0; }
+.nav-mock .brand { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; color: #1a1a1a; }
+
+.context-label { font-size: 10px; color: #ccc; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+
+/* Sizes row */
+.sizes { display: flex; align-items: flex-end; gap: 16px; margin-top: 12px; }
+.sizes svg { display: block; }
+.size-label { font-size: 9px; color: #ccc; text-align: center; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<h1>РемонтПро - Ключ (варианты)</h1>
+<p class="subtitle">6 стилистически разных подходов к иконке ключа. Корпоративные цвета: #1e3a5f + #c9a962.</p>
+
+<div class="grid">
+
+  <!-- 1: Классический минималистичный -->
+  <div class="card">
+    <div class="card-label">1 - Классика</div>
+    <div class="card-desc">Вертикальный ключ, один контур. Головка с отверстием, два зубца. Просто, читаемо, надёжно.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="14" r="9" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <circle cx="24" cy="14" r="3.5" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+          <line x1="24" y1="23" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="36" x2="31" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="42" x2="29" y2="42" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="14" r="9" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <circle cx="24" cy="14" r="3.5" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <line x1="24" y1="23" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="36" x2="31" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="42" x2="29" y2="42" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2: Ключ с домом в головке -->
+  <div class="card">
+    <div class="card-label">2 - Ключ + дом</div>
+    <div class="card-desc">В головке ключа - силуэт крыши. Ключ от дома, ключ от квартиры. Два символа в одном.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="15" r="10" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <path d="M18 17 L24 11 L30 17" stroke="#1e3a5f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+          <path d="M20 16 L20 21 L28 21 L28 16" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+          <line x1="24" y1="25" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="36" x2="31" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="42" x2="29" y2="42" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="15" r="10" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <path d="M18 17 L24 11 L30 17" stroke="#1e3a5f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <path d="M20 16 L20 21 L28 21 L28 16" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+            <line x1="24" y1="25" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="36" x2="31" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="42" x2="29" y2="42" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3: Ключ-буква Р -->
+  <div class="card">
+    <div class="card-label">3 - Ключ-Р</div>
+    <div class="card-desc">Головка ключа образует букву Р (РемонтПро). Монограмма + предмет в одном знаке.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8 L16 44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M16 8 L26 8 C32 8 36 12 36 17 C36 22 32 26 26 26 L16 26" stroke="#1e3a5f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+          <line x1="16" y1="34" x2="24" y2="34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="16" y1="40" x2="22" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8 L16 44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M16 8 L26 8 C32 8 36 12 36 17 C36 22 32 26 26 26 L16 26" stroke="#1e3a5f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <line x1="16" y1="34" x2="24" y2="34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="16" y1="40" x2="22" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4: Ключ с золотым акцентом -->
+  <div class="card">
+    <div class="card-label">4 - Золотой акцент</div>
+    <div class="card-desc">Минимальный ключ, зубцы в золоте (#c9a962). Акцент на результат - золотой ключ от готовой квартиры.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="14" r="9" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <circle cx="24" cy="14" r="3.5" fill="#c9a962"/>
+          <line x1="24" y1="23" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="36" x2="31" y2="36" stroke="#c9a962" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="42" x2="29" y2="42" stroke="#c9a962" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="14" r="9" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <circle cx="24" cy="14" r="3.5" fill="#c9a962"/>
+            <line x1="24" y1="23" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="36" x2="31" y2="36" stroke="#c9a962" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="42" x2="29" y2="42" stroke="#c9a962" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5: Ключ в круге (badge) -->
+  <div class="card">
+    <div class="card-label">5 - Badge / печать</div>
+    <div class="card-desc">Горизонтальный ключ вписан в круг. Как печать, знак качества, badge. Работает как favicon.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+          <circle cx="15" cy="24" r="5" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+          <circle cx="15" cy="24" r="2" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+          <line x1="20" y1="24" x2="38" y2="24" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="33" y1="24" x2="33" y2="19" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="37" y1="24" x2="37" y2="20" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <circle cx="15" cy="24" r="5" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <circle cx="15" cy="24" r="2" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+            <line x1="20" y1="24" x2="38" y2="24" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="33" y1="24" x2="33" y2="19" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="24" x2="37" y2="20" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6: Горизонтальный ключ (современный) -->
+  <div class="card">
+    <div class="card-label">6 - Горизонтальный</div>
+    <div class="card-desc">Ключ лежит горизонтально - как стрелка, направление. Квадратная головка (современный ключ от квартиры). Золотой торец.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="18" width="12" height="12" rx="2" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <rect x="8" y="22" width="4" height="4" rx="1" fill="#c9a962"/>
+          <line x1="16" y1="24" x2="44" y2="24" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="36" y1="24" x2="36" y2="30" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="42" y1="24" x2="42" y2="28" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="18" width="12" height="12" rx="2" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <rect x="8" y="22" width="4" height="4" rx="1" fill="#c9a962"/>
+            <line x1="16" y1="24" x2="44" y2="24" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="36" y1="24" x2="36" y2="30" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="42" y1="24" x2="42" y2="28" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7: Два ключа скрещены -->
+  <div class="card">
+    <div class="card-label">7 - Герб (два ключа)</div>
+    <div class="card-desc">Два ключа скрещены крест-накрест. Геральдический стиль - надёжность, традиция, основательность. Как семейный герб.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(24,24) rotate(-45) translate(-24,-24)">
+            <circle cx="24" cy="14" r="7" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="14" r="2.5" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+            <line x1="24" y1="21" x2="24" y2="40" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="32" x2="29" y2="32" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="37" x2="28" y2="37" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(24,24) rotate(45) translate(-24,-24)">
+            <circle cx="24" cy="14" r="7" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="14" r="2.5" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+            <line x1="24" y1="21" x2="24" y2="40" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="32" x2="29" y2="32" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="37" x2="28" y2="37" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(24,24) rotate(-45) translate(-24,-24)">
+              <circle cx="24" cy="14" r="7" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="14" r="2.5" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+              <line x1="24" y1="21" x2="24" y2="40" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="32" x2="29" y2="32" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="37" x2="28" y2="37" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(24,24) rotate(45) translate(-24,-24)">
+              <circle cx="24" cy="14" r="7" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="14" r="2.5" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+              <line x1="24" y1="21" x2="24" y2="40" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="32" x2="29" y2="32" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="37" x2="28" y2="37" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8: Ключ-стрелка вверх -->
+  <div class="card">
+    <div class="card-label">8 - Рост (стрелка вверх)</div>
+    <div class="card-desc">Ключ направлен вверх - рост, развитие, улучшение. Зубцы как ступени. Квартира становится лучше.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="12" r="8" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <circle cx="24" cy="12" r="3" fill="#c9a962"/>
+          <line x1="24" y1="20" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="28" x2="30" y2="28" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="30" y1="28" x2="30" y2="32" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="36" x2="32" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="32" y1="36" x2="32" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="12" r="8" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <circle cx="24" cy="12" r="3" fill="#c9a962"/>
+            <line x1="24" y1="20" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="28" x2="30" y2="28" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="30" y1="28" x2="30" y2="32" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="36" x2="32" y2="36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="32" y1="36" x2="32" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9: Геометрический ключ -->
+  <div class="card">
+    <div class="card-label">9 - Геометрия</div>
+    <div class="card-desc">Абстрактный ключ из геометрических фигур. Треугольник + прямоугольник. Современный, технологичный вид.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="12,16 24,8 36,16" stroke="#1e3a5f" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+          <rect x="18" y="16" width="12" height="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <rect x="22" y="19" width="4" height="3" fill="#c9a962"/>
+          <line x1="24" y1="22" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="32" x2="30" y2="32" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="40" x2="28" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12,16 24,8 36,16" stroke="#1e3a5f" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+            <rect x="18" y="16" width="12" height="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <rect x="22" y="19" width="4" height="3" fill="#c9a962"/>
+            <line x1="24" y1="22" x2="24" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="32" x2="30" y2="32" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="40" x2="28" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10: Ключ в шестиугольнике -->
+  <div class="card">
+    <div class="card-label">10 - Гайка (шестиугольник)</div>
+    <div class="card-desc">Горизонтальный ключ в шестиугольнике. Инструментальность, техническая точность. Как гайка - надёжное соединение.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="24,4 40,12 40,28 24,36 8,28 8,12" stroke="#1e3a5f" stroke-width="2" fill="none" stroke-linejoin="round"/>
+          <circle cx="18" cy="20" r="4" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+          <circle cx="18" cy="20" r="1.5" fill="#c9a962"/>
+          <line x1="22" y1="20" x2="34" y2="20" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="30" y1="20" x2="30" y2="25" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="34" y1="20" x2="34" y2="24" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="24,4 40,12 40,28 24,36 8,28 8,12" stroke="#1e3a5f" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="18" cy="20" r="4" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+            <circle cx="18" cy="20" r="1.5" fill="#c9a962"/>
+            <line x1="22" y1="20" x2="34" y2="20" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="30" y1="20" x2="30" y2="25" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+            <line x1="34" y1="20" x2="34" y2="24" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11: Одна линия -->
+  <div class="card">
+    <div class="card-label">11 - Одна линия (оригинал)</div>
+    <div class="card-desc">Весь ключ нарисован одной непрерывной линией. Минимализм, элегантность. Как подпись, росчерк.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8 C16 8 10 14 10 22 C10 30 16 36 24 36 L24 44 L30 44 L30 40 L24 40 L24 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="24" cy="22" r="3" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 8 C16 8 10 14 10 22 C10 30 16 36 24 36 L24 44 L30 44 L30 40 L24 40 L24 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="22" r="3" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11a: Горизонтальная линия -->
+  <div class="card">
+    <div class="card-label">11a - Горизонтальный</div>
+    <div class="card-desc">Тот же принцип — одна линия, но ключ лежит горизонтально. Движение слева направо, как чтение.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 24 C8 16 14 10 22 10 C30 10 36 16 36 24 L44 24 L44 30 L40 30 L40 24" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="22" cy="24" r="3" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 24 C8 16 14 10 22 10 C30 10 36 16 36 24 L44 24 L44 30 L40 30 L40 24" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="22" cy="24" r="3" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11b: Более округлая головка -->
+  <div class="card">
+    <div class="card-label">11b - Мягкий (округлый)</div>
+    <div class="card-desc">Более плавные изгибы, крупная круглая головка. Дружелюбный, мягкий характер.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 6 C14 6 6 14 6 24 C6 34 14 42 24 42 L24 46 L32 46 L32 42 L24 42 L24 38 L30 38 L30 34 L24 34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="24" cy="24" r="3.5" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6 C14 6 6 14 6 24 C6 34 14 42 24 42 L24 46 L32 46 L32 42 L24 42 L24 38 L30 38 L30 34 L24 34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="24" r="3.5" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11c: Угловатый, геометричный -->
+  <div class="card">
+    <div class="card-label">11c - Жёсткий (угловатый)</div>
+    <div class="card-desc">Одна линия, но с прямыми углами. Технологичный, строгий. Как чертёж, план квартиры.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 8 L30 8 L36 14 L36 26 L30 32 L18 32 L12 26 L12 14 Z M24 32 L24 44 L30 44 L30 40 L24 40 M24 36 L28 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="24" cy="20" r="3" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 8 L30 8 L36 14 L36 26 L30 32 L18 32 L12 26 L12 14 Z M24 32 L24 44 L30 44 L30 40 L24 40 M24 36 L28 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="20" r="3" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11d: Головка-буква Р -->
+  <div class="card">
+    <div class="card-label">11d - Головка-Р</div>
+    <div class="card-desc">Одна линия, головка образует букву Р (РемонтПро). Монограмма + предмет в одном росчерке.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8 L16 44 M16 8 L26 8 C32 8 36 12 36 17 C36 22 32 26 26 26 L16 26 M16 34 L22 34 M16 40 L20 40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="26" cy="17" r="2.5" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8 L16 44 M16 8 L26 8 C32 8 36 12 36 17 C36 22 32 26 26 26 L16 26 M16 34 L22 34 M16 40 L20 40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="26" cy="17" r="2.5" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11e: Абстрактный, спираль -->
+  <div class="card">
+    <div class="card-label">11e - Спираль</div>
+    <div class="card-desc">Головка как спираль, завиток. Одна линия закручивается, потом идёт вниз. Органический, живой.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12 C28 12 32 16 32 20 C32 24 28 28 24 28 C20 28 16 24 16 20 C16 16 20 12 24 12 L24 44 L30 44 L30 40 L24 40 L24 36 L28 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="24" cy="20" r="2.5" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12 C28 12 32 16 32 20 C32 24 28 28 24 28 C20 28 16 24 16 20 C16 16 20 12 24 12 L24 44 L30 44 L30 40 L24 40 L24 36 L28 36" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="20" r="2.5" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11f: Тонкая линия, минимализм -->
+  <div class="card">
+    <div class="card-label">11f - Ультратонкий</div>
+    <div class="card-desc">Та же идея, но линия тоньше (1.5px). Воздушный, лёгкий. Как штрих карандашом.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8 C16 8 10 14 10 22 C10 30 16 36 24 36 L24 44 L30 44 L30 40 L24 40 L24 36" stroke="#1e3a5f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="24" cy="22" r="2.5" fill="#c9a962"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 8 C16 8 10 14 10 22 C10 30 16 36 24 36 L24 44 L30 44 L30 40 L24 40 L24 36" stroke="#1e3a5f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="22" r="2.5" fill="#c9a962"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12: Ключ с короной -->
+  <div class="card">
+    <div class="card-label">12 - Корона (премиум)</div>
+    <div class="card-desc">Головка ключа стилизована под корону. Премиум-сегмент, высокое качество, элитный ремонт.</div>
+    <div class="showcase">
+      <div class="icon-block">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 18 L14 10 L18 14 L22 8 L26 14 L30 10 L30 18 Z" stroke="#1e3a5f" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <circle cx="22" cy="14" r="1.5" fill="#c9a962"/>
+          <rect x="14" y="18" width="16" height="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+          <line x1="22" y1="24" x2="22" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="22" y1="34" x2="28" y2="34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="22" y1="40" x2="26" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="context-label">Навбар</div>
+        <div class="nav-mock">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 18 L14 10 L18 14 L22 8 L26 14 L30 10 L30 18 Z" stroke="#1e3a5f" stroke-width="2" stroke-linejoin="round" fill="none"/>
+            <circle cx="22" cy="14" r="1.5" fill="#c9a962"/>
+            <rect x="14" y="18" width="16" height="6" stroke="#1e3a5f" stroke-width="2.5" fill="none"/>
+            <line x1="22" y1="24" x2="22" y2="44" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="22" y1="34" x2="28" y2="34" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="22" y1="40" x2="26" y2="40" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand">РемонтПро</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
